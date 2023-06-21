@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "tailwindcss": "^3.0.23"
+  },
+  "name": "portofolio_tailwind_css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
