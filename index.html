@@ -13,7 +13,26 @@
         } else {
         document.documentElement.classList.remove('dark')
         }
+        const logo = document.querySelector('.skill-logo').cloneNode(true)
+        document.querySelector('.skill-logo-container').appendChild(logo)
     </script>
+    <style>
+        .skill-logo-container {
+            display: flex;
+        }
+        .skill-logo {
+            animation: infiniteScroll 10s linear infinite;
+            flex-shrink: 0;
+        }
+        @keyframes infiniteScroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -34,16 +53,16 @@
                     <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark lg:dark:bg-transparent dark:shadow-slate-500">
                         <ul class="block lg:flex">
                             <li class="group">
-                                <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Beranda</a>
+                                <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Home</a>
                             </li>
                             <li class="group">
-                                <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Tentang Saya</a>
+                                <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">About Me</a>
                             </li>
                             <li class="group">
                                 <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Portfolio</a>
                             </li>
                             <li class="group">
-                                <a href="#clients" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Skill</a>
+                                <a href="#clients" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Skills</a>
                             </li>
                             <li class="group">
                                 <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Blog</a>
@@ -76,10 +95,10 @@
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full self-center px-4 lg:w-1/2" >
-                    <h1 class="text-base font-semibold text-primary md:text-xl">Halo semua 👋, saya <span class="block text-slate-900 text-4xl mt-1 lg:text-5xl dark:text-white">Fatkhan Akbar</span></h1>
-                    <h2 class="font-medium text-slate-500 text-lg mb-5 lg:text-2xl dark:text-white">Web Programmer</h2>
-                    <p class="font-medium text-secondary mb-10 leading-relaxed">Saya seorang siswa lulusan dari Rekayasa Perangkat Lunak, saya mengerti HTML, CSS, JavaScript dan beberapa framework seperti Laravel, CodeIgniter, Bootstrap, TailwindCss. Saya juga pernah mengikuti berbagai sertifikasi yang berkaitan dengan bidang Web Developer. <span class="text-slate-900 font-semibold"></span> </p> 
-                    <a href="#" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 trantition duration-300 ease-in-out">Hubungi Saya</a>
+                    <h1 class="text-base font-semibold text-primary md:text-xl">Hello everyone 👋, Me <span class="block text-slate-900 text-4xl mt-1 lg:text-5xl dark:text-white">Fatkhan Akbar</span></h1>
+                    <h2 class="font-medium text-slate-500 text-lg mb-5 lg:text-2xl dark:text-white">Web Developer</h2>
+                    <p class="font-medium text-secondary mb-10 leading-relaxed">I am a graduate student of Software Engineering, I understand HTML, CSS, JavaScript and some frameworks such as Laravel, CodeIgniter, Bootstrap, TailwindCss. I have also taken various certifications related to the field of Web Developer. <span class="text-slate-900 font-semibold"></span> </p> 
+                    <a href="#" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 trantition duration-300 ease-in-out">Contact Me</a>
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2">
                     <div class="relative mt-10 lg:mt-0 lg:right-0">
@@ -101,28 +120,28 @@
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-10 lg:w-1/2">
-                    <h4 class="font-bold uppercase text-primary text-3xl mb-4">Tentang Saya</h4>
+                    <h4 class="font-bold uppercase text-primary text-3xl mb-4">About Me</h4>
                     <!-- <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Yuk, Belajar Pemrograman Bersama!</h2> -->
                     <!-- <p class="font-medium text-base text-secondary max-w-xl ">Perkenalkan nama saya Fatkhan Akbar, lahir di Trenggalek pada 01 April 2005. Saya baru saja menyelesaikan pendidikan di SMK Negeri 2 Trenggalek tepatnya di tahun 2023 ini. Saya merupakan lulusan program keahlian Rekayasa Perangkat Lunak. Melalui jurusan tersebut saya dapat menguasai bahasa pemrograman dan berbagai hal mengenai perangkat lunak. Sewaktu berada di SMK Negeri 2 Trenggalek, saya pernah melaksanakan Praktik Kerja Lapangan selama 6 bulan di Griya Marketer Academy Malang, di sana saya mempelajari mengenai marketing dan pemasaran dengan media internet. Banyak hal yang dapat saya pelajari setiap harinya untuk mewujudkan impian saya sebagai seorang programmer.</p> -->
-                    <p class="font-medium text-base text-secondary max-w-xl ">Saya, Fatkhan Akbar, lulusan Rekayasa
-                        Perangkat Lunak pada tahun 2023, membawa
-                        pengalaman berharga selama ±8 bulan sebagai
-                        Web Developer di CV. Natusi. Dalam peran
-                        tersebut, saya berhasil berkontribusi pada
-                        proses perancangan, pengembangan, dan
-                        pemeliharaan sebuah aplikasi website.
-                        Tanggung jawab saya melibatkan pemastian
-                        kelancaran operasional aplikasi serta
-                        penanggulangan bug yang mungkin timbul.
-                        Melalui pengalaman ini, saya telah
-                        mengembangkan keterampilan yang kuat dalam
-                        pemrograman web dan memiliki tekad untuk
-                        berkarier sebagai seorang Fullstack Web
+                    <p class="font-medium text-base text-secondary max-w-xl ">I, Fatkhan Akbar, a graduate of Engineering
+                        Software in 2023, brings
+                        valuable experience for ±8 months as
+                        Web Developer di CV. Natusi. In the role
+                        I succeeded in contributing to the
+                        planning, development, and
+                        maintenance of a website application.
+                        My responsibility involves ensuring
+                        smooth application operations and
+                        Bug countermeasures that may arise.
+                        Through this experience, I have
+                        develop strong skills in
+                        web programming and have a determination to
+                        career as a Fullstack Web
                         Developer.</p>
                 </div>
                 <div class="w-full px-4 lg:w-1/2">
-                    <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Mari Berteman</h3>
-                    <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Untuk informasi lengkap mengenai diri saya, Anda bisa mengunjungi media sosial yang telah saya lampirkan di bawah ini.</p>
+                    <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Let's Make Friends</h3>
+                    <p class="font-medium text-base text-secondary mb-6 lg:text-lg">For complete information about myself, you can visit the social media that I have attached below.</p>
 
                     <div class="flex items-center">
                         <!-- YouTube -->
@@ -164,9 +183,9 @@
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-2xl text-primary mb-2">Portfolio</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Project Terbaru</h2>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Latest Projects</h2>
                     <p class="font-medium text-md text-secondary md:text-lg">
-                        Berikut merupakan beberapa projek yang pernah saya buat dengan menggabungkan beberapa pelajaran terkait serta mengembangkan ilmu yang saya miliki.</p>
+                        Here are some of the projects that I have made by combining several related lessons and developing the knowledge I have.</p>
                 </div>
             </div>
 
@@ -223,45 +242,46 @@
                 </div>
             </div>
 
-            <div class="w-full px-4">
-                <div class="flex flex-wrap items-center justify-center">
-                    <a href="" class="max-w-[130px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-                        <h3 class="font-bold text-white text-lg dark:text-dark">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                        </h3>
-                        <!-- <img src="dist/img/clients/google.svg.png" alt="Google"> -->
+            <div class="w-full px-4 skill-logo-container overflow-hidden">
+                <div class="flex flex-wrap items-center justify-center skill-logo">
+                    <a href="laravel.com" class="max-w-[130px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/laravel.png" alt="Laravel">
                     </a>
-                    <a href="" class="max-w-[130px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-                        <h3 class="font-bold text-white text-lg dark:text-dark">
-                            <li>PHP</li>
-                            <li>GIT</li>
-                            <li>JAVA</li>
-                            <li>MYSQL</li>
-                        </h3>
-                        <!-- <img src="dist/img/clients/Gojek.png" alt="Gojek"> -->
+                    <a href="https://nginx.org/en/" class="max-w-[130px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/nginx.png" alt="Nginx">
                     </a>
-                    <a href="" class="max-w-[130px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-                        <h3 class="font-bold text-white text-lg dark:text-dark">
-                            <li>Laravel</li>
-                            <li>CodeIgniter</li>
-                            <li>Tailwind Css</li>
-                            <li>Bootstrap</li>
-                        </h3>
-                        <!-- <img src="dist/img/clients/Tokopedia.png" alt="Tokopedia"> -->
+                    <a href="https://tailwindcss.com/" class="max-w-[130px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/tailwindcss.png" alt="Tailwind Css">
                     </a>
-                    <a href="" class="max-w-[130px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-                        <h3 class="font-bold text-white text-lg dark:text-dark">
-                            <li>Problem Solving</li>
-                            <li>Leadership</li>
-                            <li>Bekerja sama dalam tim</li>
-                        </h3>
-                        <!-- <img src="dist/img/clients/samsung.png" alt="Samsung"> -->
+                    <a href="https://nextjs.org/" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/nextjs.png" alt="Next Js">
                     </a>
-                    <!-- <a href="" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-                        <img src="dist/img/clients/traveloka.png" alt="Traveloka">
-                    </a> -->
+                    <a href="https://www.postgresql.org/" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/postgree.png" alt="Postgresql">
+                    </a>
+                    <a href="https://www.mysql.com/" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/mysql.png" alt="Mysql">
+                    </a>
+                </div>
+                <div class="flex flex-wrap items-center justify-center skill-logo">
+                    <a href="laravel.com" class="max-w-[130px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/laravel.png" alt="Laravel">
+                    </a>
+                    <a href="https://nginx.org/en/" class="max-w-[130px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/nginx.png" alt="Nginx">
+                    </a>
+                    <a href="https://tailwindcss.com/" class="max-w-[130px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/tailwindcss.png" alt="Tailwind Css">
+                    </a>
+                    <a href="https://nextjs.org/" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/nextjs.png" alt="Next Js">
+                    </a>
+                    <a href="https://www.postgresql.org/" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/postgree.png" alt="Postgresql">
+                    </a>
+                    <a href="https://www.mysql.com/" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/mysql.png" alt="Mysql">
+                    </a>
                 </div>
             </div>
         </div>
@@ -274,7 +294,7 @@
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-2xl text-primary mb-2">Achievement</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"> Pencapaian Saya</h2>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"> My Achievements</h2>
                     <p class="font-medium text-md text-secondary md:text-lg"></p>
                 </div>
             </div>
@@ -331,14 +351,14 @@
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Hubungi Saya</h2>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Contact Me</h2>
                     <p class="font-medium text-md text-secondary md:text-lg"></p>
                 </div>
             </div>
             <form>
                 <div class="w-full lg:w-2/3 lg:mx-auto">
                     <div class="w-full px-4 mb-8">
-                        <label for="name" class="text-base font-bold text-primary ">Nama</label>
+                        <label for="name" class="text-base font-bold text-primary ">Name</label>
                         <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
                 </div>
                 <div class="w-full px-4 mb-8">
@@ -346,11 +366,11 @@
                     <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
                 </div>
                 <div class="w-full px-4 mb-8">
-                    <label for="message" class="text-base font-bold text-primary ">Pesan</label>
+                    <label for="message" class="text-base font-bold text-primary ">Message</label>
                     <textarea type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"></textarea>
             </div>
             <div class="w-full px-4">
-                <button class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Kirim</button>
+                <button class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Send</button>
             </div>
         </div>
         </form>
@@ -364,37 +384,43 @@
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
                     <h2 class="font-bold text-4xl text-white mb-3">FATKHAN AKBAR</h2>
-                    <h3 class="font-bold text-2xl mb-2">Hubungi Saya</h3>
+                    <h3 class="font-bold text-2xl mb-2">Contact Me</h3>
                     <p>fatkhanakbar46@gmail.com</p>
-                    <P>RT.03/RW.01</P>
+                    <!-- <P>RT.03/RW.01</P>
                     <p>Ds. Salamrejo, Kec. Karangan</p>
-                    <p>Kab. Trenggalek</p>
+                    <p>Kab. Trenggalek</p> -->
                 </div>
                 <div class="w-full px-4 mb-12 md:w-1/3">
-                    <h3 class="font-semibold text-xl text-white mb-5">Kategori Tulisan</h3>
+                    <h3 class="font-semibold text-xl text-white mb-5">Categories Writing</h3>
                     <ul class="text-slate-300">
                         <li>
                             <a href="#" class="inline-block text-base hover:text-primary mb-3">Programing </a>
                         </li>
                         <li>
-                            <a href="#" class="inline-block text-base hover:text-primary mb-3">Teknologi</a>
+                            <a href="#" class="inline-block text-base hover:text-primary mb-3">Technology</a>
                         </li>
                         <li>
-                            <a href="#" class="inline-block text-base hover:text-primary mb-3">Gaya Hidup</a>
+                            <a href="#" class="inline-block text-base hover:text-primary mb-3">Lifestyle</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block text-base hover:text-primary mb-3">Shift</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block text-base hover:text-primary mb-3">Da'wah</a>
                         </li>
                     </ul>
                 </div>
                 <div class="w-full px-4 mb-12 md:w-1/3">
-                    <h3 class="font-semibold text-xl text-white mb-5">Beranda</h3>
+                    <h3 class="font-semibold text-xl text-white mb-5">Home</h3>
                     <ul class="text-slate-300">
                         <li>
-                            <a href="#home" class="inline-block text-base hover:text-primary mb-3">Tentang Saya</a>
+                            <a href="#home" class="inline-block text-base hover:text-primary mb-3">About Me</a>
                         </li>
                         <li>
                             <a href="#portfolio" class="inline-block text-base hover:text-primary mb-3">Portfolio</a>
                         </li>
                         <li>
-                            <a href="#clients" class="inline-block text-base hover:text-primary mb-3">Skill</a>
+                            <a href="#clients" class="inline-block text-base hover:text-primary mb-3">Skills</a>
                         </li>
                         <li>
                             <a href="#blog" class="inline-block text-base hover:text-primary mb-3">Blog</a>
@@ -434,7 +460,7 @@
                         <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                     </a>
                 </div>
-                <p class="font-medium text-xs text-slate-500 text-center">Dibuat Dengan <span class="text-pink-500">❤</span> Oleh <a href="https://instagram.com/_fatkhan.akbar" target="_blank" class="font-bold text-primary">Fatkhan Akbar</a>, menggunakan <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500">Tailwind Css</a>.</p>
+                <p class="font-medium text-xs text-slate-500 text-center">Made With <span class="text-pink-500">❤</span> By <a href="https://instagram.com/_fatkhan.akbar" target="_blank" class="font-bold text-primary">Fatkhan Akbar</a>, using <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500">Tailwind Css</a>.</p>
             </div>
         </div>
     </footer>

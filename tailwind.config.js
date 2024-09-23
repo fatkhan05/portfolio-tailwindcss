@@ -20,3 +20,19 @@ module.exports = {
   },
   plugins: [],
 }
+
+module.exports = {
+theme: {
+  extend: {
+    keyframes: {
+      moveRight: {
+        '0%': { transform: 'translateX(0)' },
+        '100%': { transform: 'translateX(100%)' },
+      },
+    },
+    animation: {
+      moveRight: 'moveRight 10s linear infinite',
+    },
+  },
+},
+}
