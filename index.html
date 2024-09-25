@@ -16,23 +16,6 @@
         const logo = document.querySelector('.skill-logo').cloneNode(true)
         document.querySelector('.skill-logo-container').appendChild(logo)
     </script>
-    <style>
-        .skill-logo-container {
-            display: flex;
-        }
-        .skill-logo {
-            animation: infiniteScroll 10s linear infinite;
-            flex-shrink: 0;
-        }
-        @keyframes infiniteScroll {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(-100%);
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -93,26 +76,46 @@
     <!-- Hero Section -->
     <section id="home" class="pt-36 dark:bg-dark">
         <div class="container">
-            <div class="flex flex-wrap">
-                <div class="w-full self-center px-4 lg:w-1/2" >
-                    <h1 class="text-base font-semibold text-primary md:text-xl">Hello everyone 👋, Me <span class="block text-slate-900 text-4xl mt-1 lg:text-5xl dark:text-white">Fatkhan Akbar</span></h1>
+            <div class="relative flex items-center justify-center">
+                <div class="w-full self-center px-4 lg:w-1 text-center" 
+                >
+                    <h1 class="text-base font-semibold text-primary md:text-xl">Hello everyone <span class="inline-block animate-wave origin-bottom-right">👋</span>, Me <span class="block text-slate-900 text-4xl font-bold mt-1 lg:text-5xl dark:text-white name-text"> Fatkhan Akbar</span></h1> <!-- <img src="dist/img/header-shape.png" alt="" class="absolute inset-0 -z-10 h-auto object-cover"> -->
                     <h2 class="font-medium text-slate-500 text-lg mb-5 lg:text-2xl dark:text-white">Web Developer</h2>
-                    <p class="font-medium text-secondary mb-10 leading-relaxed">I am a graduate student of Software Engineering, I understand HTML, CSS, JavaScript and some frameworks such as Laravel, CodeIgniter, Bootstrap, TailwindCss. I have also taken various certifications related to the field of Web Developer. <span class="text-slate-900 font-semibold"></span> </p> 
-                    <a href="#" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 trantition duration-300 ease-in-out">Contact Me</a>
+                    <p class="font-medium text-secondary mb-10 leading-relaxed"><span class="font-bold">Web Developer With ±1 year</span> of experience in web applications. <br> Currently transitioning to Fullstack Developer.<span class="text-slate-900 font-semibold"></span> </p> 
                 </div>
-                <div class="w-full self-end px-4 lg:w-1/2">
-                    <div class="relative mt-10 lg:mt-0 lg:right-0">
-                        <img src="dist/img/akbar.png" alt="" class="relative z-10 max-w-full mx-auto bottom-0 left-10" style="height: 30rem;">
-                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
-                            <svg class="mt-5" width="550" height="550" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="#219F94" d="M60.4,2.6C60.4,27.4,30.2,54.7,4.6,54.7C-20.9,54.7,-41.8,27.4,-41.8,2.6C-41.8,-22.1,-20.9,-44.2,4.6,-44.2C30.2,-44.2,60.4,-22.1,60.4,2.6Z" transform="translate(100 100) scale(1.4)" />
-                              </svg>
-                        </span>
-                    </div>
-                </div>
+            </div>
+            <div class="flex justify-center tech-stack mt-3">
+                <a href=""><img src="dist/img/sosmed/github.svg" class="mr-3" width="80" height="80" alt="GitHub"></a>
+                <div class="mr-3 ml-3"></div>
+                <div class="mr-3 ml-3"></div>
+                <a href=""><img src="dist/img/sosmed/medium.svg" class="mt-10 mr-3 " width="80" height="80" alt="GitHub"></a>
+                <div class="mr-3 ml-3"></div>
+                <div class="mr-3 ml-3"></div>
+                <a href=""><img src="dist/img/sosmed/linkedin2.svg" class="mt-10 mr-3 " width="80" height="80" alt="GitHub"></a>
+                <div class="mr-3 ml-3"></div>
+                <div class="mr-3 ml-3"></div>
+                <a href=""><img src="dist/img/sosmed/email.svg" class="" width="80" height="80" alt="GitHub"></a>
             </div>
         </div>
     </section>
+    <!-- <div class="flex flex-wrap">
+        <div class="w-full self-center px-4 lg:w-1/2" >
+            <h1 class="text-base font-semibold text-primary md:text-xl">Hello everyone 👋, Me <span class="block text-slate-900 text-4xl mt-1 lg:text-5xl dark:text-white">Fatkhan Akbar</span></h1>
+            <h2 class="font-medium text-slate-500 text-lg mb-5 lg:text-2xl dark:text-white">Web Developer</h2>
+            <p class="font-medium text-secondary mb-10 leading-relaxed">I am a graduate student of Software Engineering, I understand HTML, CSS, JavaScript and some frameworks such as Laravel, CodeIgniter, Bootstrap, TailwindCss. I have also taken various certifications related to the field of Web Developer. <span class="text-slate-900 font-semibold"></span> </p> 
+            <a href="#" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 trantition duration-300 ease-in-out">Contact Me</a>
+        </div>
+        <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-10 lg:mt-0 lg:right-0">
+                <img src="dist/img/akbar.png" alt="" class="relative z-10 max-w-full mx-auto bottom-0 left-10" style="height: 30rem;">
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
+                    <svg class="mt-5" width="550" height="550" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#219F94" d="M60.4,2.6C60.4,27.4,30.2,54.7,4.6,54.7C-20.9,54.7,-41.8,27.4,-41.8,2.6C-41.8,-22.1,-20.9,-44.2,4.6,-44.2C30.2,-44.2,60.4,-22.1,60.4,2.6Z" transform="translate(100 100) scale(1.4)" />
+                        </svg>
+                </span>
+            </div>
+        </div>
+    </div> -->
     <!-- Hero Section end -->
 
     <!-- About Section Start -->
@@ -125,7 +128,7 @@
                     <!-- <p class="font-medium text-base text-secondary max-w-xl ">Perkenalkan nama saya Fatkhan Akbar, lahir di Trenggalek pada 01 April 2005. Saya baru saja menyelesaikan pendidikan di SMK Negeri 2 Trenggalek tepatnya di tahun 2023 ini. Saya merupakan lulusan program keahlian Rekayasa Perangkat Lunak. Melalui jurusan tersebut saya dapat menguasai bahasa pemrograman dan berbagai hal mengenai perangkat lunak. Sewaktu berada di SMK Negeri 2 Trenggalek, saya pernah melaksanakan Praktik Kerja Lapangan selama 6 bulan di Griya Marketer Academy Malang, di sana saya mempelajari mengenai marketing dan pemasaran dengan media internet. Banyak hal yang dapat saya pelajari setiap harinya untuk mewujudkan impian saya sebagai seorang programmer.</p> -->
                     <p class="font-medium text-base text-secondary max-w-xl ">I, Fatkhan Akbar, a graduate of Engineering
                         Software in 2023, brings
-                        valuable experience for ±8 months as
+                        valuable experience for ±1 Year as
                         Web Developer di CV. Natusi. In the role
                         I succeeded in contributing to the
                         planning, development, and
@@ -293,8 +296,8 @@
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-2xl text-primary mb-2">Achievement</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"> My Achievements</h2>
+                    <h4 class="font-semibold text-2xl text-primary mb-2">Blog</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"> My Blog</h2>
                     <p class="font-medium text-md text-secondary md:text-lg"></p>
                 </div>
             </div>
@@ -460,7 +463,8 @@
                         <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                     </a>
                 </div>
-                <p class="font-medium text-xs text-slate-500 text-center">Made With <span class="text-pink-500">❤</span> By <a href="https://instagram.com/_fatkhan.akbar" target="_blank" class="font-bold text-primary">Fatkhan Akbar</a>, using <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500">Tailwind Css</a>.</p>
+                <!-- <p class="font-medium text-xs text-slate-500 text-center">Made With <span class="text-pink-500">❤</span> By <a href="https://instagram.com/_fatkhan.akbar" target="_blank" class="font-bold text-primary">Fatkhan Akbar</a>, using <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500">Tailwind Css</a>.</p> -->
+                <p class="font-medium text-lg text-slate-500 text-center">Fatkhan Akbar &copy; 2024</p>
             </div>
         </div>
     </footer>

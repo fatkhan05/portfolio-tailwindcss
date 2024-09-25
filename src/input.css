@@ -34,3 +34,27 @@ html, body {
 #dark-toggle:checked ~ label div.toggle-circle {
   @apply translate-x-3;
 }
+
+
+.skill-logo-container {
+  display: flex;
+}
+.skill-logo {
+  animation: infiniteScroll 10s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.tech-stack img {
+  transition: transform 0.2s ease;
+}
+
+.tech-stack img:hover {
+  transform: rotate(15deg) scale(1.2);
+}

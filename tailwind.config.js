@@ -11,7 +11,8 @@ module.exports = {
         // primary: '#14b8a6',
         secondary: '#64748b',
         dark: '#0f172a',
-        primary: '#219F94',
+        // primary: '#219F94',
+        primary: '#1FC2F0',
       },
       screens: {
         '2xl': '1320px',
@@ -19,20 +20,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
-
-module.exports = {
-theme: {
-  extend: {
-    keyframes: {
-      moveRight: {
-        '0%': { transform: 'translateX(0)' },
-        '100%': { transform: 'translateX(100%)' },
-      },
-    },
-    animation: {
-      moveRight: 'moveRight 10s linear infinite',
-    },
-  },
-},
 }
